@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cardápio de pizzas, porções, bebidas e coquetéis.">
+  <title>Menu | Bartender</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <!-- MÚSICA: coloque seu arquivo em audio/ambiente.mp3 para ativar este botão. -->
+  <audio id="background-music" loop preload="metadata">
+    <source src="sounds/bkgrndsound.mp3" type="audio/mp3">
+  </audio>
+  <button class="music-toggle" type="button" aria-pressed="false" aria-label="Ativar música de fundo">
+    <span class="music-toggle__icon" aria-hidden="true">♫</span>
+    <span class="music-toggle__text">MÚSICA OFF</span>
+  </button>
+
+  <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Ativar tema claro">
+    <span aria-hidden="true">☀</span>
+    <span class="theme-toggle__text">TEMA CLARO</span>
+  </button>
+
+  <header class="hero">
+    <div class="hero-glass">
+      <!-- LOGO: ao receber a imagem, substitua o texto LOGO por uma tag img.
+           Exemplo: <img src="images/logo.png" alt="Logo Edwiges"> -->
+      <div class="brand-logo" aria-label="Espaço reservado para o logo Edwiges">
+        <img src="images/logo.png" alt="Logo Edwiges">
+      </div>
+
+      <span class="eyebrow">BEM-VINDO</span>
+      <h1 class="brand-name">EDWIGES</h1>
+      <div class="brand-subtitle">PIZZA E BISTRÔ</div>
+      <p>Pizzas, porções, bebidas e coquetéis preparados para deixar cada encontro mais especial.</p>
+      <a class="scroll-button" href="#menu">VER CARDÁPIO <span>↓</span></a>
+
+      <!-- CONTATO RÁPIDO: use os mesmos links da seção CONTATO no fim da página. -->
+      <div class="hero-contacts" aria-label="Canais de contato">
+        <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.1 16.8L2 22l5.3-1.1A11 11 0 1 0 20.5 3.5Z"></path><path d="M8.1 7.3c.2-.5.4-.5.8-.5h.7c.2 0 .4.1.5.4l.8 2c.1.3.1.5 0 .7l-.5.7c-.1.2-.1.3 0 .5.5.9 1.3 1.7 2.2 2.2.2.1.4.1.5 0l.7-.5c.2-.1.4-.1.7 0l2 .8c.3.1.4.3.4.5v.7c0 .4 0 .6-.5.8-.5.2-1.1.3-1.6.2-1.1-.2-2.5-1-3.8-2.3-1.3-1.3-2.1-2.7-2.3-3.8-.1-.6 0-1.1.2-1.6Z"></path></svg>
+          <span>WHATSAPP</span>
+        </a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.8" r="1"></circle></svg>
+          <span>INSTAGRAM</span>
+        </a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M13.4 19v-6h2l.3-2.3h-2.3V9.3c0-.7.2-1.1 1.2-1.1h1.2V6.1c-.2 0-.9-.1-1.7-.1-1.8 0-3 1.1-3 3.1v1.6H9v2.3h2.1v6"></path></svg>
+          <span>FACEBOOK</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENU DESPLEGABLE DE NAVEGAÇÃO -->
+  <nav class="menu-navigation" aria-label="Navegação do cardápio">
+    <details>
+      <summary>
+        <span>EXPLORAR CARDÁPIO</span>
+        <span aria-hidden="true">⌄</span>
+      </summary>
+
+      <div class="menu-navigation__links">
+        <a href="#pizzas">Pizzas à la carte</a>
+        <a href="#porcoes">Porções</a>
+        <a href="#sucos">Sucos</a>
+        <a href="#refrigerantes">Refrigerantes</a>
+        <a href="#cervejas">Cervejas</a>
+        <a href="#drinks-casa">Drinks da Casa</a>
+        <a href="#classicos">Coquetéis Clássicos</a>
+      </div>
+    </details>
+  </nav>
+
+  <main id="menu" class="menu-container">
+
+    <!-- PIZZAS À LA CARTE -->
+    <section id="pizzas" class="menu-section">
+      <div class="section-heading">
+        <span>01</span>
+        <div>
+          <p class="section-kicker">ESPECIALIDADES DA CASA</p>
+          <h2>PIZZAS À LA CARTE</h2>
+        </div>
+      </div>
+      <div class="category-empty">Em breve, nossas opções de pizzas.</div>
+    </section>
+
+    <!-- PORÇÕES -->
+    <section id="porcoes" class="menu-section">
+      <div class="section-heading">
+        <span>02</span>
+        <div>
+          <p class="section-kicker">PARA COMPARTILHAR</p>
+          <h2>PORÇÕES</h2>
+        </div>
+      </div>
+      <div class="category-empty">Em breve, nossas porções.</div>
+    </section>
+
+    <!-- SUCOS -->
+    <section id="sucos" class="menu-section">
+      <div class="section-heading">
+        <span>03</span>
+        <div>
+          <p class="section-kicker">REFRESCANTES</p>
+          <h2>SUCOS</h2>
+        </div>
+      </div>
+      <div class="category-empty">Em breve, nossos sucos.</div>
+    </section>
+
+    <!-- REFRIGERANTES -->
+    <section id="refrigerantes" class="menu-section">
+      <div class="section-heading">
+        <span>04</span>
+        <div>
+          <p class="section-kicker">BEBIDAS GELADAS</p>
+          <h2>REFRIGERANTES</h2>
+        </div>
+      </div>
+      <div class="category-empty">Em breve, nossos refrigerantes.</div>
+    </section>
+
+    <!-- CERVEJAS -->
+    <section id="cervejas" class="menu-section">
+      <div class="section-heading">
+        <span>05</span>
+        <div>
+          <p class="section-kicker">GELADAS</p>
+          <h2>CERVEJAS</h2>
+        </div>
+      </div>
+      <div class="category-empty">Em breve, nossas cervejas.</div>
+    </section>
+
+    <!-- DRINKS DA CASA -->
+    <section id="drinks-casa" class="menu-section">
+      <div class="section-heading">
+        <span>06</span>
+        <div>
+          <p class="section-kicker">SELEÇÃO DA CASA</p>
+          <h2>DRINKS DA CASA</h2>
+        </div>
+      </div>
+
+      <div class="drinks-list">
+        <!-- DRINK 01 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/Grifinoria.jpg" alt="Drink Grifinória"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>GRIFINÓRIA</h3><strong>R$ 27,99</strong></div>
+            <p class="description">Uma criação especial da casa.</p>
+            <div class="ingredients">Jurupinga · Leite condensado · Morango · Twist de morango</div>
+          </div>
+        </article>
+
+        <!-- DRINK 02 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/LufaLufa.jpg" alt="Drink Lufa-Lufa"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>LUFA-LUFA</h3><strong>R$ 27,99</strong></div>
+            <p class="description">Doce, cremoso e cheio de personalidade.</p>
+            <div class="ingredients">Jurupinga · Leite condensado · Morango · Twist de morango</div>
+          </div>
+        </article>
+
+        <!-- DRINK 03 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/Sonserina.jpg" alt="Drink Sonserina"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>SONSERINA</h3><strong>R$ 27,99</strong></div>
+            <p class="description">Uma criação especial da casa.</p>
+            <div class="ingredients">Jurupinga · Leite condensado · Morango · Twist de morango</div>
+          </div>
+        </article>
+
+        <!-- DRINK 04 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/Amortencia.jpg" alt="Drink Amortência"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>AMORTÊNTIA</h3><strong>R$ 27,99</strong></div>
+            <p class="description">Uma criação especial da casa.</p>
+            <div class="ingredients">Jurupinga · Leite condensado · Morango · Twist de morango</div>
+          </div>
+        </article>
+
+        <!-- DRINK 05 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/SorteLiquida.jpg" alt="Drink Sorte Liquida"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>Sorte Liquida</h3><strong>R$ 27,99</strong></div>
+            <p class="description">Uma criação especial da casa.</p>
+            <div class="ingredients">Jurupinga · Leite condensado · Morango · Twist de morango</div>
+          </div>
+        </article>
+
+        <!-- DRINK 06 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/pocaodeamor.jpg" alt="Drink Poção De Amor"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>Poção De Amor</h3><strong>R$ 27,99</strong></div>
+            <p class="description">Uma criação especial da casa.</p>
+            <div class="ingredients">Jurupinga · Leite condensado · Morango · Twist de morango</div>
+          </div>
+        </article>
+
+
+      </div>
+    </section>
+
+    <!-- COQUETÉIS CLÁSSICOS -->
+    <section id="classicos" class="menu-section">
+      <div class="section-heading">
+        <span>07</span>
+        <div>
+          <p class="section-kicker">OS FAVORITOS</p>
+          <h2>COQUETÉIS CLÁSSICOS</h2>
+        </div>
+      </div>
+
+      <div class="drinks-list">
+        <!-- CLÁSSICO 01 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/Caipirinha.jpg" alt="Caipirinha"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>CAIPIRINHA</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Clássico brasileiro, intenso e refrescante.</p>
+            <div class="ingredients">Velho Barreiro · Limão · Açúcar · Twist de limão</div>
+          </div>
+        </article>
+
+        <!-- CLÁSSICO 02 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/Caipiroska.jpg" alt="Caipiroska"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>CAIPIROSKA</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Leve, cítrica e perfeitamente equilibrada.</p>
+            <div class="ingredients">Vodka · Limão · Açúcar · Twist de limão</div>
+          </div>
+        </article>
+
+        <!-- CLÁSSICO 03 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/Saquerinha.jpg" alt="Saquerinha"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>SAQUERINHA</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Um clássico com o toque suave do saquê.</p>
+            <div class="ingredients">Saquê · Limão · Açúcar · Twist de limão</div>
+          </div>
+        </article>
+
+        <!-- CLÁSSICO 04 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/SexOnTheBeach.jpg" alt="Sex on the Beach"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>SEX ON THE BEACH</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Frutado, vibrante e tropical.</p>
+            <div class="ingredients">Vodka · Pêssego · Laranja · Cranberry</div>
+          </div>
+        </article>
+
+        <!-- CLÁSSICO 05 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/PinaColada.jpg" alt="Piña Colada"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>PIÑA COLADA</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Cremosa, tropical e irresistível.</p>
+            <div class="ingredients">Rum · Abacaxi · Leite de coco</div>
+          </div>
+        </article>
+
+        <!-- CLÁSSICO 06 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/GinTonica.jpg" alt="Gin tônica"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>GIN TÔNICA</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Aromática, fresca e elegante.</p>
+            <div class="ingredients">Gin · Água tônica · Botânicos</div>
+          </div>
+        </article>
+
+        <!-- CLÁSSICO 07 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/Negroni.jpg" alt="Negroni"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>NEGRONI</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Clássico, intenso e perfeitamente equilibrado.</p>
+            <div class="ingredients">Gin · Vermute rosso · Campari · Twist de laranja</div>
+          </div>
+        </article>
+
+        <!-- CLÁSSICO 08 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/Mojito.jpg" alt="Mojito"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>MOJITO</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Refrescante, cítrico e cheio de vida.</p>
+            <div class="ingredients">Rum · Hortelã · Limão · Açúcar · Soda</div>
+          </div>
+        </article>
+
+        <!-- CLÁSSICO 09 -->
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/AperolSpritz.jpg" alt="Aperol Spritz"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>APEROL SPRITZ</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Leve, borbulhante e marcante.</p>
+            <div class="ingredients">Aperol · Espumante · Água com gás · Laranja</div>
+          </div>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/BatidadefrutaConVodka.jpg" alt="Batida de fruta con vinho ou vodka"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>Batida de fruta con vinho ou vodka</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Leve, borbulhante e marcante.</p>
+            <div class="ingredients">Aperol · Espumante · Água com gás · Laranja</div>
+          </div>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/DoseDeWisky.jpg" alt="Dose de Whisky"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>Dose de Whisky</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Leve, borbulhante e marcante.</p>
+            <div class="ingredients">Aperol · Espumante · Água com gás · Laranja</div>
+          </div>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/DrinkSemAlcool.jpg" alt="Drink sem Àlcool"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>Drink sem Àlcool</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Leve, borbulhante e marcante.</p>
+            <div class="ingredients">Aperol · Espumante · Água com gás · Laranja</div>
+          </div>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/SodaItaliana.jpg" alt="Soda Italiana"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>Soda Italiana</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Leve, borbulhante e marcante.</p>
+            <div class="ingredients">Aperol · Espumante · Água com gás · Laranja</div>
+          </div>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-photo"><img src="images/LagoaAzul.jpg" alt="Lagoa Azul"></div>
+          <div class="drink-info">
+            <div class="drink-top"><h3>Lagoa Azul</h3><strong>R$ 20,00</strong></div>
+            <p class="description">Leve, borbulhante e marcante.</p>
+            <div class="ingredients">Aperol · Espumante · Água com gás · Laranja</div>
+          </div>
+        </article>
+
+
+
+
+
+      </div>
+    </section>
+
+    <!-- CONTATO: troque os links pelos perfis oficiais do estabelecimento -->
+    <section class="contact-card" aria-labelledby="contact-title">
+      <span class="section-kicker">FALE COM A GENTE</span>
+      <h2 id="contact-title">CONTATO</h2>
+      <p>Reserve, peça informações ou acompanhe as novidades pelas nossas redes.</p>
+
+      <div class="social-links">
+        <a class="social-link social-link--whatsapp" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp"><span aria-hidden="true">◉</span> WHATSAPP</a>
+        <a class="social-link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram"><span aria-hidden="true">◎</span> INSTAGRAM</a>
+        <a class="social-link" href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook"><span aria-hidden="true">f</span> FACEBOOK</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-line"></div>
+    <p>MENU · COCKTAILS · EXPERIÊNCIA</p>
+    <small>© 2026 Todos os direitos reservados</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
